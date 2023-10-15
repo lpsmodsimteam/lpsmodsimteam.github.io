@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <HTML lang='en'>
   <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Survey of Software for Simulating Computers, Networks, Memory, HPCs</title>
     <meta property="og:title" content="Survey of Software for Simulation" /> <!-- https://ogp.me/ -->
     
     <meta property="og:type" content="website" /> <!-- https://ogp.me/#types -->
     <meta property="og:site_name" content="Survey of Software for Simulation" /> <!-- https://ogp.me/#optional -->
 
-   <!-- when clicking on an named anchor, highlight the hyperlinked text -->
-   <style>
+    <!-- when clicking on an named anchor, highlight the hyperlinked text -->
+    <style>
       /* https://css-tricks.com/on-target/ */
       :target {
         background: yellow;
       }
-   </style>
+    </style>
 
-<style>
-
-
+    <style>
       /* TOC formatting
         from https://www.tipsandtricks-hq.com/simple-table-of-contents-toc-using-pure-html-and-css-code-9217  */
       #toc_container {
@@ -72,17 +70,19 @@
     
   </head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y839ZLCG2T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y839ZLCG2T');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y839ZLCG2T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-Y839ZLCG2T');
+  </script>
   <BODY>
 
-
+    <h2>A Survey of Software for Simulating Computers, Networks, Memory, HPCs</h2>
+<P>Includes deprecated software</P>
+    
 <div id="toc_container">
 <p class="toc_title">Contents</p>
 <!-- the following table was generated on the command line using
@@ -96,11 +96,15 @@ cat user_documentation.html |\
 <OL class="toc_list">
   <LI><a href="#SST">Structural Simulation Toolkit (SST)</a></LI>
   <LI><a href="#nework_simulation">Network Simulators</a></LI>
+  <LI><a href="#processor_simulation">Processor Simulators</a></LI>
+  <LI><a href="#VHDL">VHDL</a></LI>
+  <LI><a href="#survey_of_simulation_surveys">Survey of Simulation Surveys</a></LI>
 </OL>
 </div>
 
 <P>&nbsp;</P>
 
+    <HR>
 <H2 id="SST">Structural Simulation Toolkit (SST)</H2>
 <P></P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
 
@@ -137,7 +141,42 @@ Utilties:
 <a href="https://github.com/abadp/tpzsimul">github.com/abadp/tpzsimul</a>; as of 2023-10-14, last update was July 2015.<BR>
 <a href="https://ieeexplore.ieee.org/document/6209268">TOPAZ: An Open-Source Interconnection Network Simulator for Chip Multiprocessors and Supercomputers</a>
 
-<P>Last updated 2023-09-26</P>
+<HR>
+<H2 id="processor_simulation">Processor Simulators</H2>
+
+    <P>
+<a href="https://www.gem5.org/">gem5.org</a>
+</P>
+    
+    <P>mic1 is a Java-based simulator which implements the Mic-1 microarchitecture</P>
+      <a href="https://www.ontko.com/mic1/">
+    </P>  
+    <P>
+      <a href="https://github.com/andersbll/logisim-diku">github.com/andersbll/logisim-diku</a>; as of 2023-10-14, last update was Oct 2011
+    </P>
+  
+    <HR>
+    <H2 id="VHDL">VHDL</H2>
+    
+    <P>VHDL 2008/93/87 simulator<BR>
+    <a href="http://ghdl.free.fr/">ghdl.free.fr</a>
+    </P>
+      
+    <HR>
+  
+    <H2 id="survey_of_simulation_surveys">Survey of Simulation Surveys</H2>
+
+    <P>
+      <a href="https://www.brianlinkletter.com/2023/02/network-emulators-and-network-simulators-2023/">Twenty-five open-source network emulators and simulators you can use in 2023</a><BR>
+    with comments: <a href="https://news.ycombinator.com/item?id=37842161">news.ycombinator.com/item?id=37842161</a>
+    </P>
+    
+    <P>
+    <a href="https://ieeexplore.ieee.org/document/8718630">A Survey of Computer Architecture Simulation Techniques and Tools</a>
+    </P>
+    
+    <HR>
+    <P>Last updated 2023-10-14</P>
 
   </BODY>
 </HTML>
