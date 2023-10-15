@@ -1,4 +1,107 @@
-<H2>Structural Simulation Toolkit (SST)</H2>
+<!DOCTYPE html>
+<HTML lang='en'>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Survey of Software for Simulating Computers, Networks, Memory, HPCs</title>
+    <meta property="og:title" content="Survey of Software for Simulation" /> <!-- https://ogp.me/ -->
+    
+    <meta property="og:type" content="website" /> <!-- https://ogp.me/#types -->
+    <meta property="og:site_name" content="Survey of Software for Simulation" /> <!-- https://ogp.me/#optional -->
+
+   <!-- when clicking on an named anchor, highlight the hyperlinked text -->
+   <style>
+      /* https://css-tricks.com/on-target/ */
+      :target {
+        background: yellow;
+      }
+   </style>
+
+<style>
+
+
+      /* TOC formatting
+        from https://www.tipsandtricks-hq.com/simple-table-of-contents-toc-using-pure-html-and-css-code-9217  */
+      #toc_container {
+        background: #f9f9f9 none repeat scroll 0 0;
+        border: 1px solid #aaa;
+        display: table;
+        font-size: 95%;
+        margin-bottom: 1em;
+        padding: 20px;
+        width: auto;
+      }
+
+      .toc_title {
+        font-weight: 700;
+        text-align: center;
+      }
+
+      /* table of contents ordering
+      from https://jsfiddle.net/jasonkarns/6xkzv37e/
+      linked from https://stackoverflow.com/questions/14138507/creating-table-of-contents-in-html/21684020#21684020 */
+/*      ol {
+        counter-reset: item
+      }
+      li {
+        display: block
+      }
+      li:before {
+        content: counters(item, ".")" ";
+        counter-increment: item
+      }
+*/
+      /* a bit of space around the edges looks cleaner */
+      html, body {
+        height: 100%;
+        margin: 5;
+        padding: 5;
+      }
+
+      /* CSS trick for forcing images to fit inside window */
+      img {
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    </style>
+
+    <!-- defines the default zoom for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+  </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y839ZLCG2T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y839ZLCG2T');
+</script>
+  <BODY>
+
+
+<div id="toc_container">
+<p class="toc_title">Contents</p>
+<!-- the following table was generated on the command line using
+cat user_documentation.html |\
+     grep "^<H" |\
+     sed 's/<\/H.*>/<\/a><\/LI>/' |\
+     sed 's/<H2 id="/  <LI><a href="#/' |\
+     sed 's/<H3 id="/    <LI><a href="#/' |\
+     sed 's/<H4 id="/      <LI><a href="#/'
+-->
+<OL class="toc_list">
+  <LI><a href="#SST">Structural Simulation Toolkit (SST)</a></LI>
+  <LI><a href="#nework_simulation">Network Simulators</a></LI>
+</OL>
+</div>
+
+<P>&nbsp;</P>
+
+<H2 id="SST">Structural Simulation Toolkit (SST)</H2>
 <P></P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
 
 <P>Official <a href="https://github.com/orgs/sstsimulator/repositories">SST repos</a>:</P>
@@ -27,5 +130,14 @@ Utilties:
 
 <P>More SST-related effors: <a href="https://github.com/orgs/lpsmodsimteam/repositories">github.com/orgs/lpsmodsimteam/repositories</a></P>
 
+<HR>
+
+<H2 id="nework_simulation">Network Simulators</H2>
+
+<a href="https://github.com/abadp/tpzsimul">github.com/abadp/tpzsimul</a>; as of 2023-10-14, last update was July 2015.<BR>
+<a href="https://ieeexplore.ieee.org/document/6209268">TOPAZ: An Open-Source Interconnection Network Simulator for Chip Multiprocessors and Supercomputers</a>
 
 <P>Last updated 2023-09-26</P>
+
+  </BODY>
+</HTML>
