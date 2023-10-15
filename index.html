@@ -81,72 +81,88 @@
   <BODY>
 
     <h2>A Survey of Software for Simulating Computers, Networks, Memory, HPCs</h2>
-<P>Includes deprecated software</P>
+      <P>Includes deprecated software</P>
+      <P>Want to contribute something to this page? <BR>
+        Submit a Pull Request to <a href="https://github.com/lpsmodsimteam/lpsmodsimteam.github.io">github.com/lpsmodsimteam/lpsmodsimteam.github.io</P>
+      </P>
+    <P>Disclaimers: Inclusion of software doesn't imply endorsement. Software has not been tested and may not work. </P>
     
-<div id="toc_container">
-<p class="toc_title">Contents</p>
-<!-- the following table was generated on the command line using
-cat user_documentation.html |\
-     grep "^<H" |\
-     sed 's/<\/H.*>/<\/a><\/LI>/' |\
-     sed 's/<H2 id="/  <LI><a href="#/' |\
-     sed 's/<H3 id="/    <LI><a href="#/' |\
-     sed 's/<H4 id="/      <LI><a href="#/'
--->
-<OL class="toc_list">
-  <LI><a href="#SST">Structural Simulation Toolkit (SST)</a></LI>
-  <LI><a href="#nework_simulation">Network Simulators</a></LI>
-  <LI><a href="#processor_simulation">Processor Simulators</a></LI>
-  <LI><a href="#VHDL">VHDL</a></LI>
-  <LI><a href="#survey_of_simulation_surveys">Survey of Simulation Surveys</a></LI>
-</OL>
-</div>
+    <div id="toc_container">
+    <p class="toc_title">Contents</p>
+    <!-- the following table was generated on the command line using
+    cat user_documentation.html |\
+         grep "^<H" |\
+         sed 's/<\/H.*>/<\/a><\/LI>/' |\
+         sed 's/<H2 id="/  <LI><a href="#/' |\
+         sed 's/<H3 id="/    <LI><a href="#/' |\
+         sed 's/<H4 id="/      <LI><a href="#/'
+    -->
+    <OL class="toc_list">
+      <LI><a href="#DES">Discrete Event Simulation (DES)</a></LI>
+      <OL>
+        <LI><a href="#SST">Structural Simulation Toolkit (SST)</a></LI>
+        <LI><a href="#SimPy">SimPy</a></LI>
+      </OL>
+      <LI><a href="#nework_simulation">Network Simulators</a></LI>
+      <LI><a href="#processor_simulation">Processor Simulators</a></LI>
+      <LI><a href="#VHDL">VHDL</a></LI>
+      <LI><a href="#survey_of_simulation_surveys">Survey of Simulation Surveys</a></LI>
+    </OL>
+    </div>
 
-<P>&nbsp;</P>
+    <P>&nbsp;</P>
 
-    <HR>
-<H2 id="SST">Structural Simulation Toolkit (SST)</H2>
-<P></P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
+    <H2 id="DES">Discrete Event Simulation</H2>
+      <P>
+        <a href="https://en.wikipedia.org/wiki/Discrete-event_simulation">en.wikipedia.org/wiki/Discrete-event_simulation</a>
+      </P>
+    
+      <H3 id="SST">Structural Simulation Toolkit (SST)</H2>
+        <P></P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
 
-<P>Official <a href="https://github.com/orgs/sstsimulator/repositories">SST repos</a>:</P>
-<UL>
-  <LI><a href="https://github.com/sstsimulator/sst-core">github.com/sstsimulator/sst-core</a></LI>
-  <LI><a href="https://github.com/sstsimulator/sst-elements">github.com/sstsimulator/sst-elements</a></LI>
-  <LI><a href="https://github.com/sstsimulator/sst-macro">github.com/sstsimulator/sst-macro</a></LI>
-  <LI><a href="https://github.com/sstsimulator/sst-docs">github.com/sstsimulator/sst-docs</a></LI>
-</UL>
+        <P>Official <a href="https://github.com/orgs/sstsimulator/repositories">SST repos</a>:</P>
+        <UL>
+          <LI><a href="https://github.com/sstsimulator/sst-core">github.com/sstsimulator/sst-core</a></LI>
+          <LI><a href="https://github.com/sstsimulator/sst-elements">github.com/sstsimulator/sst-elements</a></LI>
+          <LI><a href="https://github.com/sstsimulator/sst-macro">github.com/sstsimulator/sst-macro</a></LI>
+          <LI><a href="https://github.com/sstsimulator/sst-docs">github.com/sstsimulator/sst-docs</a></LI>
+        </UL>
+        
+        Unofficial tutorial materials:
+        <UL>
+          <LI><a href="https://github.com/lpsmodsimteam/sst_introductory_tutorial">github.com/lpsmodsimteam/sst_introductory_tutorial</a></LI>
+          <LI><a href="https://github.com/jleidel/sst-documentation/tree/Level3Container">github.com/jleidel/sst-documentation in the Level3Container branch</a></LI>
+          <LI><a href="https://github.com/lpsmodsimteam/sst_statistics_tutorial">github.com/lpsmodsimteam/sst_statistics_tutorial</a></LI>
+          <LI><a href="https://github.com/lpsmodsimteam/sst_logging_tutorial">github.com/lpsmodsimteam/sst_logging_tutorial</a></LI>
+          <LI><a href="https://www.youtube.com/watch?v=ipxoVb2dEcw&list=PLgehegDe4T2y1badxrxcuvIsX42V64t2x">YouTube video of SST</a>; see also <a href="https://github.com/lpsmodsimteam/sst-video-demo-examples">github.com/lpsmodsimteam/sst-video-demo-examples</a></LI>
+          <LI>a "car wash" model: <a href="https://github.com/sstsimulator/sst-elements/tree/master/src/sst/elements/simpleSimulation">github.com/sstsimulator/sst-elements</a></LI>
+        </UL>
+        
+        Utilties:
+        <UL>
+          <LI><a href="https://github.com/tactcomplabs/sst-containers">github.com/tactcomplabs/sst-containers</a></LI>
+          <LI><a href="https://github.com/lpsmodsimteam/ahp_graph">github.com/lpsmodsimteam/ahp_graph</a></LI>
+        </UL>
+        
+        <P>More SST-related effors: <a href="https://github.com/orgs/lpsmodsimteam/repositories">github.com/orgs/lpsmodsimteam/repositories</a></P>
+        
+        <H3 id="SimPy">SimPy</H2>    
+        <a href="https://gitlab.com/team-simpy/simpy/">gitlab.com/team-simpy/simpy/</a><BR>
+            <a href="https://simpy.readthedocs.io/en/latest/">simpy.readthedocs.io/en/latest/</a>
+            
+        <HR>
 
-Unofficial tutorial materials:
-<UL>
-  <LI><a href="https://github.com/lpsmodsimteam/sst_introductory_tutorial">github.com/lpsmodsimteam/sst_introductory_tutorial</a></LI>
-  <LI><a href="https://github.com/jleidel/sst-documentation/tree/Level3Container">github.com/jleidel/sst-documentation in the Level3Container branch</a></LI>
-  <LI><a href="https://github.com/lpsmodsimteam/sst_statistics_tutorial">github.com/lpsmodsimteam/sst_statistics_tutorial</a></LI>
-  <LI><a href="https://github.com/lpsmodsimteam/sst_logging_tutorial">github.com/lpsmodsimteam/sst_logging_tutorial</a></LI>
-  <LI><a href="https://www.youtube.com/watch?v=ipxoVb2dEcw&list=PLgehegDe4T2y1badxrxcuvIsX42V64t2x">YouTube video of SST</a>; see also <a href="https://github.com/lpsmodsimteam/sst-video-demo-examples">github.com/lpsmodsimteam/sst-video-demo-examples</a></LI>
-  <LI>a "car wash" model: <a href="https://github.com/sstsimulator/sst-elements/tree/master/src/sst/elements/simpleSimulation">github.com/sstsimulator/sst-elements</a></LI>
-</UL>
+    <H2 id="nework_simulation">Network Simulators</H2>
 
-Utilties:
-<UL>
-  <LI><a href="https://github.com/tactcomplabs/sst-containers">github.com/tactcomplabs/sst-containers</a></LI>
-  <LI><a href="https://github.com/lpsmodsimteam/ahp_graph">github.com/lpsmodsimteam/ahp_graph</a></LI>
-</UL>
-
-<P>More SST-related effors: <a href="https://github.com/orgs/lpsmodsimteam/repositories">github.com/orgs/lpsmodsimteam/repositories</a></P>
-
-<HR>
-
-<H2 id="nework_simulation">Network Simulators</H2>
-
-<a href="https://github.com/abadp/tpzsimul">github.com/abadp/tpzsimul</a>; as of 2023-10-14, last update was July 2015.<BR>
-<a href="https://ieeexplore.ieee.org/document/6209268">TOPAZ: An Open-Source Interconnection Network Simulator for Chip Multiprocessors and Supercomputers</a>
-
-<HR>
-<H2 id="processor_simulation">Processor Simulators</H2>
-
-    <P>
-<a href="https://www.gem5.org/">gem5.org</a>
-</P>
+      <a href="https://github.com/abadp/tpzsimul">github.com/abadp/tpzsimul</a>; as of 2023-10-14, last update was July 2015.<BR>
+      <a href="https://ieeexplore.ieee.org/document/6209268">TOPAZ: An Open-Source Interconnection Network Simulator for Chip Multiprocessors and Supercomputers</a>
+      
+      <HR>
+      <H2 id="processor_simulation">Processor Simulators</H2>
+      
+          <P>
+      <a href="https://www.gem5.org/">gem5.org</a>
+      </P>
     
     <P>mic1 is a Java-based simulator which implements the Mic-1 microarchitecture</P>
       <a href="https://www.ontko.com/mic1/">
