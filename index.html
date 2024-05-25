@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Survey of Software for Simulating Computers, Networks, Memory, HPCs</title>
     <meta property="og:title" content="Survey of Software for Simulation" /> <!-- https://ogp.me/ -->
-    
+
     <meta property="og:type" content="website" /> <!-- https://ogp.me/#types -->
     <meta property="og:site_name" content="Survey of Software for Simulation" /> <!-- https://ogp.me/#optional -->
 
@@ -68,7 +68,7 @@
 
     <!-- defines the default zoom for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
   </head>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y839ZLCG2T"></script>
@@ -76,7 +76,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
+
     gtag('config', 'G-Y839ZLCG2T');
   </script>
   <BODY>
@@ -90,8 +90,8 @@
     <UL>
       <LI>Inclusion of software on the page (or forked repos) doesn't imply endorsement by anyone.</LI>
       <LI>Software has not been tested and may not work.</LI>
-    </UL>   
-    
+    </UL>
+
     <div id="toc_container">
     <p class="toc_title">Contents</p>
     <!-- the following table was generated on the command line using
@@ -124,13 +124,118 @@
       <P><a href="https://en.wikipedia.org/wiki/List_of_discrete_event_simulation_software">en.wikipedia.org/wiki/List_of_discrete_event_simulation_software</a>
       </P>
     <fieldset><legend><H3 id="SST">Structural Simulation Toolkit (SST)</H3></legend>
-      
+
         <P></P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
 
         <P>Official <a href="https://github.com/orgs/sstsimulator/repositories">SST repos</a>:</P>
-              
+        <UL>
+          <LI><a href="https://github.com/sstsimulator/sst-core">github.com/sstsimulator/sst-core</a></LI>
+          <LI><a href="https://github.com/sstsimulator/sst-elements">github.com/sstsimulator/sst-elements</a></LI>
+          <LI><a href="https://github.com/sstsimulator/sst-macro">github.com/sstsimulator/sst-macro</a></LI>
+          <LI><a href="https://github.com/sstsimulator/sst-docs">github.com/sstsimulator/sst-docs</a></LI>
+        </UL>
+
+        Unofficial tutorial materials:
+        <UL>
+          <LI><a href="https://github.com/lpsmodsimteam/sst_introductory_tutorial">github.com/lpsmodsimteam/sst_introductory_tutorial</a></LI>
+          <LI><a href="https://github.com/jleidel/sst-documentation/tree/Level3Container">github.com/jleidel/sst-documentation in the Level3Container branch</a></LI>
+          <LI><a href="https://github.com/lpsmodsimteam/sst_statistics_tutorial">github.com/lpsmodsimteam/sst_statistics_tutorial</a></LI>
+          <LI><a href="https://github.com/lpsmodsimteam/sst_logging_tutorial">github.com/lpsmodsimteam/sst_logging_tutorial</a></LI>
+          <LI><a href="https://www.youtube.com/watch?v=ipxoVb2dEcw&list=PLgehegDe4T2y1badxrxcuvIsX42V64t2x">YouTube video of SST</a>; see also <a href="https://github.com/lpsmodsimteam/sst-video-demo-examples">github.com/lpsmodsimteam/sst-video-demo-examples</a></LI>
+          <LI>a "car wash" model: <a href="https://github.com/sstsimulator/sst-elements/tree/master/src/sst/elements/simpleSimulation">github.com/sstsimulator/sst-elements</a></LI>
+        </UL>
+
+        Utilties:
+        <UL>
+          <LI><a href="https://github.com/tactcomplabs/sst-containers">github.com/tactcomplabs/sst-containers</a></LI>
+          <LI><a href="https://github.com/lpsmodsimteam/ahp_graph">github.com/lpsmodsimteam/ahp_graph</a></LI>
+          <LI><a href="https://github.com/tactcomplabs/sst-dbg">github.com/tactcomplabs/sst-dbg</a></LI>
+            <UL>
+              <LI>per component debug data dumps using the SIGUSR2 signaling method</LI>
+              <LI>data can be dumped in JSON or CSV form (compile-time selectable)</LI>
+              <LI>the library is "header only" so it doesn't require you to link against anything new</LI>
+              <LI>there is support for MPI dumps whereby the library will dump a single file per rank, per requested dump.  the default is to dump a file per component per requested dump (which is fine for small runs)</LI>
+              <LI>there are two built-in "consoles" to help you enable/use the library</LI>
+                <UL>
+                  <LI>sst-dbg : basic command line console that will allow you to dump data at a specific wall clock cadence, single dump (one shot) or a random cadence.  Supports sequential, threaded and MPI SST runs.  Supports ALL SST command line options
+                  <LI>sst-dbg-console : ftxui based console infrastructure for executing and visualizing the debugger output
+                </UL>
+            </UL>
+        </UL>
+
+        <P>More SST-related effors: <a href="https://github.com/orgs/lpsmodsimteam/repositories">github.com/orgs/lpsmodsimteam/repositories</a></P>
+
+<H2>SST use cases</h2>
+  <ul>
+    <LI>Use SST for coursework. Just run existing models and tweak available parameters. Semester-long coursework or project. </li>
+      <ul>
+        <li>Performance and scaling are not crucial. Existing components suffice</li>
+        <li>May be focused on a specific aspect (network, memory, cpu) or generic system modeling</li>
+        <li>Desktop-scale workflow to Excel for plotting</li>
+      </ul>
+    <LI>Extension of components for graduate research</li>
+      <ul>
+        <li>2-3 years of actual research with a year of onboarding. </li>
+        <li>Performance and scaling are nice-to-have</li>
+        <li>Desktop-scale workflow to Excel for plotting</li>
+        <li>Graduate student starts by writing either their own serial DES of a specific aspect, e.g., network, memory, cpu and then migrate into SST for more complicated aspects of integration. System-level consequences of changing one aspect - memory size, network topology, routing strategy, CPU isa, CPU cache size, file system access <BR>
+        Or<BR>
+          How an application will perform on a system with specific memory size, network topology, routing strategy, CPU isa, CPU cache size, file system access</li>
+      </ul>
+    <LI>non-SST architect: Given a set of parameters for an existing model, produce plots. </li>
+    <ul><li>SST is not that visible to user</li>
+    <li>Desktop-scale workflow to Excel for plotting</li>
+    </ul>
+<LI>Core IP development for commercial companies</li>
+<ul><li>Modifying sst-core is typically seen as out-of-scope</li>
+<li>Desktop-scale workflow to Excel for plotting; may grow to use an HPC to host SST simulations. At large scale the simulation logs output in hdf5 or elastic</li>
+<li>Core IP may be narrowly focused on network, memory, cpu; or may be an integrator asking questions of the system design. </li>
+<li>Limitations of performance and scaling constrain scope of business use case </li>
+<li>The competition to using SST is just buying off the shelf DES, e.g. from Siemens</li>
+</ul>
+<LI>Folks interested in answering complex questions but unable to simulate </li>
+<ul><li>Interested in modifying sst-core</li>
+<li>Includes both (desktop-scale workflow to Excel for plotting) and (large scale the simulation logs output in hdf5 or elastic)</li>
+</ul>
+</ul>
+<P>For question about non-parallel applications, use Gem5</p>
+  <P>For network questions that doen't involve endpoints, use OMNet++ or NS2/NS3</p>
+
+    <h2>Tutorial content needed for SST</h2>
+    <ul>
+      <LI>what is <a href="https://en.wikipedia.org/wiki/Discrete-event_simulation">DES</a>? </li>
+      <LI>SST vs other computer architecture simulation software like Verilator, ns3, OMNet++, gem5</li>
+<LI>Is SST cycle accurate?</li>
+<LI>how does SST relate to DES?</li>
+<LI>how does SST compare to alternative DES options?</li>
+<ul><li>PySim</li></ul>
+<LI>How to specify arch using Python driver file</li>
+<LI>How to specify complicated arch using Python ahp_graph</li>
+<LI>Why is running my MPI application on a simulated HPC architecture non-trivial?</li>
+  <ul><li>SST is just a DES. That means it doesn't run an operating system or have a compiler. An application needs to be compiled, and the compiled application relies on system calls provided by the operating system. Also, applications may rely on having access to a filesystem. There's no model of I/O included in SST. As a consequence, &ldquo;running an application&rdquo; is often replaced with relying on patterns of message passing rather than the actual messages associated with an application.</li>
+    <li>See QEMU and gem5 instead</li>
+  </ul>
+<LI>How to avoid using Python for sst: JSON input</li>
+<LI>How to specify absurdly large simulations: parallel JSON input</li>
+<LI>What type and size of computer do I need for SST?</li>
+<ul><li>Desktop to HPC</li>
+</ul>
+<LI>quickstart for SST -- run a (serial) demo</li>
+<LI>quickstart for SST -- run a SST demo that uses MPI</li>
+<LI>how to install SST baremetal</li>
+<LI>How to run SST from a container</li>
+<LI>how to create a new SST component from scratch</li>
+<LI>how to leverage an existing SST element</li>
+<LI>how to combine existing SST elements</li>
+<LI>an overview of SST-core</li>
+<LI>an overview of statistics in SST</li>
+<LI>Can sst run faster on gpus or fpga?</li>
+<LI>How does SST use ml or ai or llm?</li>
+</ul>
+
+
         </fieldset>
-      
+
         <fieldset><legend><H3 id="SimPy">SimPy</H2></legend>
         <a href="https://gitlab.com/team-simpy/simpy/">gitlab.com/team-simpy/simpy/</a><BR>
             <a href="https://simpy.readthedocs.io/en/latest/">simpy.readthedocs.io/en/latest/</a>
@@ -139,9 +244,68 @@
     </fieldset><!-- DES -->
         <HR>
 
+    <fieldset><legend><H2 id="nework_simulation">Network Simulators</H2></legend>
+
+            <fieldset><legend>NS-3</legend>
+            <a href="https://www.nsnam.org/">nsnam.org</a>
+            </fieldset>
+
+    <fieldset><legend>OMNet++</legend>
+
+      <a href="https://en.wikipedia.org/wiki/OMNeT%2B%2B">wikipedia.org/wiki/OMNeT++</a><BR>
+      <a href="https://omnetpp.org/">omnetpp.org</a><BR>
+      <a href="https://github.com/omnetpp/omnetpp">github.com/omnetpp/omnetpp</a>
+    </fieldset>
+
+      <fieldset><legend>TOPAZ</legend>
+      <a href="https://github.com/abadp/tpzsimul">github.com/abadp/tpzsimul</a>; as of 2023-10-14, last update was July 2015.<BR>
+      <a href="https://ieeexplore.ieee.org/document/6209268">TOPAZ: An Open-Source Interconnection Network Simulator for Chip Multiprocessors and Supercomputers</a>
+      </fieldset><!-- TOPAZ -->
+
+    </fieldset><!-- network sim -->
+      <HR>
+      <fieldset><legend><H2 id="processor_simulation">Processor Simulators</H2></legend>
+
+      <fieldset><legend>Gem5</legend>
+      <a href="https://www.gem5.org/">gem5.org</a>
+      </fieldset>
+
+      <fieldset><legend>mic1</legend>
+    <P>mic1 is a Java-based simulator which implements the Mic-1 microarchitecture</P>
+      <a href="https://www.ontko.com/mic1/">www.ontko.com/mic1/</a>
+    </P>
+      </fieldset>
+        <fieldset><legend>logisim</legend>
+    <P>
+      <a href="https://github.com/andersbll/logisim-diku">github.com/andersbll/logisim-diku</a>; as of 2023-10-14, last update was Oct 2011
+    </P>
+        </fieldset>
+      </fieldset><!-- processor -->
+    <HR>
+    <fieldset><legend><H2 id="HDL">HDL</H2></legend>
+      <a href="https://en.wikipedia.org/wiki/List_of_HDL_simulators">en.wikipedia.org/wiki/List_of_HDL_simulators</a>
+
+    <fieldset><legend>VHDL 2008/93/87 simulator</legend>
+    <a href="http://ghdl.free.fr/">ghdl.free.fr</a>
+    </P>
+    </fieldset><!-- GHDL -->
+    </fieldset><!-- VHDL -->
+    <HR>
+
+    <fieldset><legend><H2 id="survey_of_simulation_surveys">Survey of Simulation Surveys</H2></legend>
+
+    <P>
+      <a href="https://www.brianlinkletter.com/2023/02/network-emulators-and-network-simulators-2023/">Twenty-five open-source network emulators and simulators you can use in 2023</a><BR>
+    with comments: <a href="https://news.ycombinator.com/item?id=37842161">news.ycombinator.com/item?id=37842161</a>
+    </P>
+
+
+    <P>
+    <a href="https://ieeexplore.ieee.org/document/8718630">A Survey of Computer Architecture Simulation Techniques and Tools</a>
+    </P>
 
     </fieldset><!-- survey -->
-    
+
     <HR>
     <P>Last updated 2023-10-14</P>
 
