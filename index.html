@@ -82,7 +82,7 @@
   <BODY>
 
     <h2>A Survey of Software for Simulating Computers, Networks, Memory, HPCs</h2>
-      <P>Includes deprecated software.</P>
+      <P><I>Warning</i>: Includes deprecated software.</P>
       <P>Want to contribute something to this page? <BR>
         Submit a Pull Request to <a href="https://github.com/lpsmodsimteam/lpsmodsimteam.github.io">github.com/lpsmodsimteam/lpsmodsimteam.github.io</a></P>
       </P>
@@ -91,6 +91,17 @@
       <LI>Inclusion of software on the page (or forked repos) doesn't imply endorsement by anyone.</LI>
       <LI>Software has not been tested and may not work.</LI>
     </UL>
+
+    <P>&nbsp;</P>
+
+    <P>There are many types of <a href="https://en.wikipedia.org/wiki/Computer_simulation">computer simulation</a>,
+      including
+      <UL>
+        <LI><a href="https://en.wikipedia.org/wiki/Finite_element_method">finite element analysis</a> for structural analysis, electromagnetics,  etc
+        <LI>discrete event simulation -- useful for timing in the context   of multiple queues
+        <LI>numerical simulation, e.g., differential equations for fluid dynamics (weather models)
+    </uL>
+<P>This page is focused on simulating computers using computers.
 
     <div id="toc_container">
     <p class="toc_title">Contents</p>
@@ -115,6 +126,7 @@
     </OL>
     </div>
 
+
     <P>&nbsp;</P>
 
     <fieldset><legend><H2 id="DES">Discrete Event Simulation</H2></legend>
@@ -123,9 +135,26 @@
       </P>
       <P><a href="https://en.wikipedia.org/wiki/List_of_discrete_event_simulation_software">en.wikipedia.org/wiki/List_of_discrete_event_simulation_software</a>
       </P>
+
+      <a href="https://www.southampton.ac.uk/~mb1a10/sim/Discrete_Event.pdf">discrete event simulation</a>
+
+      <a href="https://en.wikipedia.org/wiki/DEVS">wikipedia: DEVS</a>; see also <a href="https://hal.archives-ouvertes.fr/hal-01562929/document">Formal Framework for Discrete-Event Simulation</a>
+
+      <P>Domains that share the DES label but are not relevant
+      because they feature person-in-the-loop:
+      <a href="https://www.ncbi.nlm.nih.gov/books/NBK293948/">hospital simulations</a> and <BR>
+        military training in aviation.
+
+
+      <P>DES jargon: A "referent" is the thing being simulated.
+
+
+
     <fieldset><legend><H3 id="SST">Structural Simulation Toolkit (SST)</H3></legend>
 
-        <P></P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
+        <P>written in C++</P>
+
+        <P>Official SST documentation is on <a href="http://sst-simulator.org/">sst-simulator.org/</a> and a subpage <a href="http://sst-simulator.org/sst-docs/">sst-simulator.org/sst-docs/</a></P>
 
         <P>Official <a href="https://github.com/orgs/sstsimulator/repositories">SST repos</a>:</P>
         <UL>
@@ -145,7 +174,9 @@
           <LI>a "car wash" model: <a href="https://github.com/sstsimulator/sst-elements/tree/master/src/sst/elements/simpleSimulation">github.com/sstsimulator/sst-elements</a></LI>
         </UL>
 
-        Utilties:
+        <P><a href="sst_frequently_asked_questions.html">Frequently asked questions (FAQ)</a>
+
+        <P>Utilties:
         <UL>
           <LI><a href="https://github.com/tactcomplabs/sst-containers">github.com/tactcomplabs/sst-containers</a></LI>
           <LI><a href="https://github.com/lpsmodsimteam/ahp_graph">github.com/lpsmodsimteam/ahp_graph</a></LI>
@@ -198,8 +229,8 @@
 <li>Includes both (desktop-scale workflow to Excel for plotting) and (large scale the simulation logs output in hdf5 or elastic)</li>
 </ul>
 </ul>
-<P>For question about non-parallel applications, use Gem5</p>
-  <P>For network questions that doen't involve endpoints, use OMNet++ or NS2/NS3</p>
+<P>For questions about non-parallel applications, use <a href="#gem5">Gem5</a>.</p>
+  <P>For network questions that doen't involve endpoints, use <a href="#omnet">OMNet++</a> or NS2/<a href="#ns3">NS3</a>.</p>
 
     <h2>Tutorial content needed for SST</h2>
     <ul>
@@ -236,45 +267,56 @@
 
         </fieldset>
 
-        <fieldset><legend><H3 id="SimPy">SimPy</H2></legend>
+        <fieldset><legend><H3 id="SimPy">SimPy</H3></legend>
+          written in Python<BR>
+          <a href="https://en.wikipedia.org/wiki/SimPy">https://en.wikipedia.org/wiki/SimPy</a><BR>
         <a href="https://gitlab.com/team-simpy/simpy/">gitlab.com/team-simpy/simpy/</a><BR>
-            <a href="https://simpy.readthedocs.io/en/latest/">simpy.readthedocs.io/en/latest/</a>
+            <a href="https://simpy.readthedocs.io/en/latest/">simpy.readthedocs.io/en/latest/</a><BR>
+              <a href="https://www.researchgate.net/publication/322949363_Discrete_Event_Simulation_It's_Easy_with_SimPy">DES: It's easy with SimPy</a>
 
         </fieldset><!-- simpy -->
+
+        <fieldset><legend><H3>simmer</H3></legend>
+        written in R<BR>
+          <a href="https://rdrr.io/cran/simmer/">simmer</a>
+        </fieldset>
+
+
     </fieldset><!-- DES -->
         <HR>
 
     <fieldset><legend><H2 id="nework_simulation">Network Simulators</H2></legend>
 
-            <fieldset><legend>NS-3</legend>
+            <fieldset><legend id="ns3">NS-3</legend>
             <a href="https://www.nsnam.org/">nsnam.org</a>
             </fieldset>
-
-    <fieldset><legend>OMNet++</legend>
+<BR>
+    <fieldset><legend id="omnet">OMNet++</legend>
 
       <a href="https://en.wikipedia.org/wiki/OMNeT%2B%2B">wikipedia.org/wiki/OMNeT++</a><BR>
       <a href="https://omnetpp.org/">omnetpp.org</a><BR>
       <a href="https://github.com/omnetpp/omnetpp">github.com/omnetpp/omnetpp</a>
     </fieldset>
-
+<BR>
       <fieldset><legend>TOPAZ</legend>
       <a href="https://github.com/abadp/tpzsimul">github.com/abadp/tpzsimul</a>; as of 2023-10-14, last update was July 2015.<BR>
       <a href="https://ieeexplore.ieee.org/document/6209268">TOPAZ: An Open-Source Interconnection Network Simulator for Chip Multiprocessors and Supercomputers</a>
       </fieldset><!-- TOPAZ -->
-
+<BR>
     </fieldset><!-- network sim -->
       <HR>
       <fieldset><legend><H2 id="processor_simulation">Processor Simulators</H2></legend>
 
-      <fieldset><legend>Gem5</legend>
+      <fieldset><legend id="gem5">Gem5</legend>
       <a href="https://www.gem5.org/">gem5.org</a>
       </fieldset>
-
+<BR>
       <fieldset><legend>mic1</legend>
     <P>mic1 is a Java-based simulator which implements the Mic-1 microarchitecture</P>
       <a href="https://www.ontko.com/mic1/">www.ontko.com/mic1/</a>
     </P>
       </fieldset>
+<BR>
         <fieldset><legend>logisim</legend>
     <P>
       <a href="https://github.com/andersbll/logisim-diku">github.com/andersbll/logisim-diku</a>; as of 2023-10-14, last update was Oct 2011
@@ -285,6 +327,11 @@
     <fieldset><legend><H2 id="HDL">HDL</H2></legend>
       <a href="https://en.wikipedia.org/wiki/List_of_HDL_simulators">en.wikipedia.org/wiki/List_of_HDL_simulators</a>
 
+
+    <fieldset><legend>Verilator</legend>
+    <a href="https://www.veripool.org/verilator/">Verilog/SystemVerilog simualtor</a>
+    </fieldset>
+<BR>
     <fieldset><legend>VHDL 2008/93/87 simulator</legend>
     <a href="http://ghdl.free.fr/">ghdl.free.fr</a>
     </P>
@@ -307,7 +354,7 @@
     </fieldset><!-- survey -->
 
     <HR>
-    <P>Last updated 2023-10-14</P>
+    <P>Last updated 2024-05-24</P>
 
   </BODY>
 </HTML>
